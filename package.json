@@ -1,7 +1,7 @@
 {
   "name": "@panosoft/sql-utils",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.0.0",
+  "description": "Utilities to assist with SQL script generation.",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha --harmony_arrow_functions"
@@ -19,5 +19,9 @@
   "dependencies": {
     "is_js": "^0.7.4",
     "ramda": "^0.17.1"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5"
   }
 }
