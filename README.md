@@ -4,6 +4,8 @@ Utilities to assist with SQL script generation.
 
 [![npm](https://img.shields.io/npm/v/@panosoft/sql-utils.svg)]()
 [![npm](https://img.shields.io/npm/l/@panosoft/sql-utils.svg)]()
+[![Travis](https://img.shields.io/travis/panosoft/sql-utils.svg)]()
+[![David](https://img.shields.io/david/panosoft/sql-utils.svg)]()
 [![npm](https://img.shields.io/npm/dm/@panosoft/sql-utils.svg)]()
 
 # Installation
