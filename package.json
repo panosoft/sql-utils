@@ -1,0 +1,23 @@
+{
+  "name": "@panosoft/sql-utils",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --harmony_arrow_functions"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panosoft/sql-utils.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/panosoft/sql-utils/issues"
+  },
+  "homepage": "https://github.com/panosoft/sql-utils#readme",
+  "dependencies": {
+    "is_js": "^0.7.4",
+    "ramda": "^0.17.1"
+  }
+}
