@@ -2,33 +2,35 @@
 
 Utilities to assist with SQL script generation.
 
-[![npm](https://img.shields.io/npm/v/@panosoft/sql-utils.svg)]()
-[![npm](https://img.shields.io/npm/l/@panosoft/sql-utils.svg)]()
-[![Travis](https://img.shields.io/travis/panosoft/sql-utils.svg)]()
-[![David](https://img.shields.io/david/panosoft/sql-utils.svg)]()
-[![npm](https://img.shields.io/npm/dm/@panosoft/sql-utils.svg)]()
+[![npm version](https://img.shields.io/npm/v/@panosoft/sql-utils.svg)](https://www.npmjs.com/package/@panosoft/sql-utils)
+[![npm license](https://img.shields.io/npm/l/@panosoft/sql-utils.svg)](https://www.npmjs.com/package/@panosoft/sql-utils)
+[![Travis](https://img.shields.io/travis/panosoft/sql-utils.svg)](https://travis-ci.org/panosoft/sql-utils)
+[![David](https://img.shields.io/david/panosoft/sql-utils.svg)](https://david-dm.org/panosoft/sql-utils)
+[![npm downloads](https://img.shields.io/npm/dm/@panosoft/sql-utils.svg)](https://www.npmjs.com/package/@panosoft/sql-utils)
 
-# Installation
+## Installation
 
-```
+```sh
 npm install @panosoft/sql-utils
 ```
 
-# Usage
+## Usage
 
 ```js
 var utils = require('sql-utils');
 ```
 
-# API
+## API
 
 - [`buildCriteria`](#buildCriteria)
 - [`parenthesize`](#parenthesize)
 - [`quote`](#quote)
 - [`quoteList`](#quoteList)
 
+---
+
 <a name="buildCriteria"/>
-## buildCriteria ( criteriaArrays )
+#### buildCriteria ( criteriaArrays )
 
 Joins an array into a criteria string delimited by `AND`'s and `OR`'s.
 
@@ -53,8 +55,10 @@ var criteria = utils.buildCriteria(arrays);
 console.log(criteria); // '(a AND b AND c) OR (d AND e AND f)'
 ```
 
+---
+
 <a name="parenthesize"/>
-## parenthesize ( string )
+#### parenthesize ( string )
 
 Wraps a string with parenthesis.
 
@@ -69,8 +73,10 @@ var string = utils.parenthesize('a');
 console.log(string); // '(a)'
 ```
 
+---
+
 <a name="quote"/>
-## quote ( string )
+#### quote ( string )
 
 Wraps a string with single quotes.
 
@@ -85,8 +91,10 @@ var string = utils.quote('a');
 console.log(string); // '\'a\''
 ```
 
+---
+
 <a name="quoteList"/>
-## quoteList ( strings )
+#### quoteList ( strings )
 
 Converts an array of strings to a quoted comma delimited list.
 
