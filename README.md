@@ -88,7 +88,7 @@ __Example__
 
 ```js
 var string = utils.quote('a');
-console.log(string); // '\'a\''
+console.log(string); // "'a'"
 ```
 
 ---
@@ -106,5 +106,5 @@ __Example__
 
 ```js
 var string = utils.quoteList(['a', 'b', 'c']);
-console.log(string); // '\'a,b,c\''
+console.log(string); // "'a','b','c'"
 ```
