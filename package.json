@@ -4,7 +4,9 @@
   "description": "Utilities to assist with SQL script generation.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha --harmony_arrow_functions"
+    "test": "mocha --harmony_arrow_functions",
+    "patch": "npm version patch && git push --follow-tags && npm publish",
+    "minor": "npm version minor && git push --follow-tags && npm publish"
   },
   "repository": {
     "type": "git",
