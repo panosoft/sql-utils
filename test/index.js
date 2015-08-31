@@ -7,8 +7,8 @@ describe('buildCriteria', function () {
     expect(criteria).to.equal('');
   });
   it('identity if string', function () {
-    var criteria = utils.buildCriteria('string');
-    expect(criteria).to.equal('string');
+    var criteria = utils.buildCriteria('a');
+    expect(criteria).to.equal('a');
   });
   it('join AND\'s', function () {
     var array = ['a', 'b', 'c'];
