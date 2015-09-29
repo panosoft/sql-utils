@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/panosoft/sql-utils#readme",
   "dependencies": {
+    "@panosoft/ramda-utils": "^0.1.12",
     "is_js": "^0.7.4",
     "ramda": "^0.17.1"
   },

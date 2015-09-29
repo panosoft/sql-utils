@@ -26,6 +26,8 @@ var utils = require('sql-utils');
 - [`parenthesize`](#parenthesize)
 - [`quote`](#quote)
 - [`quoteList`](#quoteList)
+- [`parseOrderColumn`](#parseOrderColumn)
+- [`replaceOrderColumns`](#replaceOrderColumns)
 
 ---
 
@@ -108,3 +110,60 @@ __Example__
 var string = utils.quoteList(['a', 'b', 'c']);
 console.log(string); // "'a','b','c'"
 ```
+
+---
+
+<a name="parseOrderColumn"/>
+#### parseOrderColumn ( orderColumn )
+
+Returns an Array with the orderColumn in index 0 and *optionally* ASC/DESC in index 1.
+
+__Arguments__
+
+- `orderColumn` - A string definining a SQL ordering.
+
+__Examples__
+
+```js
+var orderColumn = 'userName ASC';
+utils.parseOrderColumn(orderColumn); // ['userName', 'ASC']
+```
+
+```js
+var orderColumn = 'refNum';
+utils.parseOrderColumn(orderColumn); // ['refNum']
+```
+
+---
+
+<a name="replaceOrderColumns"/>
+#### replaceOrderColumns ( orderColumns, componentColumns )
+
+Takes an Array of Order Columns and replace any column that has components in the Object of Component Columns. This will preserve the ASC/DESC suffix in the original Order Column.
+
+This is VERY useful for replacing a name column with its components, i.e. first, last and middle.
+
+__Arguments__
+
+- `orderColumns` - An Array of Order Columns.
+- `componentColumns` - An Object of component columns where the `key` is the order column and the `value` is an Array of component columns.
+
+__Examples__
+
+```js
+var orderColumns = ['userName ASC', 'clientName DESC', 'refNum'];
+var componentColumns = {
+	userName: ['usrLastName', 'usrFirstName', 'usrMI'],
+	clientName: ['clientLastName', 'clientFirstName', 'clientMI']
+};
+var columns = utils.replaceOrderColumns(orderColumns, componentColumns);
+console.log(columns);
+/*[
+	'usrLastName ASC',
+	'usrFirstName ASC',
+	'usrMI ASC',
+	'clientLastName DESC',
+	'clientFirstName DESC',
+	'clientMI DESC',
+	'refNum'
+]*/```
