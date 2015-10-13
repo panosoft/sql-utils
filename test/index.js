@@ -54,6 +54,13 @@ describe('parseOrderColumn', function () {
 	});
 });
 
+describe('parseOrderColumn', function () {
+	it('parses the Order Column to separate out the ASC/DESC portion from the column name (CASE INSENSITIVE', function () {
+		var orderColumn = 'userName asc';
+		expect(utils.parseOrderColumn(orderColumn)).to.have.members(['userName', 'asc']);
+	});
+});
+
 describe('replaceOrderColumns', function () {
 	it('replace order columns with their component columns preserving the ASC/DESC portion', function () {
 		var orderColumns = ['userName ASC', 'clientName DESC', 'refNum'];
