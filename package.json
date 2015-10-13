@@ -1,6 +1,6 @@
 {
   "name": "@panosoft/sql-utils",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Utilities to assist with SQL script generation.",
   "main": "lib/index.js",
   "scripts": {
