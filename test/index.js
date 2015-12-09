@@ -21,7 +21,7 @@ describe('buildCriteria', function () {
 			['d', 'e', 'f']
 		];
 		var criteria = utils.buildCriteria(arrays);
-		expect(criteria).to.equal('(a AND b AND c) OR (d AND e AND f)');
+		expect(criteria).to.equal('((a AND b AND c) OR (d AND e AND f))');
 	});
 });
 

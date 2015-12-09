@@ -54,7 +54,7 @@ var arrays = [
   ['d', 'e', 'f']
 ];
 var criteria = utils.buildCriteria(arrays);
-console.log(criteria); // '(a AND b AND c) OR (d AND e AND f)'
+console.log(criteria); // '((a AND b AND c) OR (d AND e AND f))'
 ```
 
 ---
