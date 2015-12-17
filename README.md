@@ -31,7 +31,7 @@ var utils = require('sql-utils');
 
 ---
 
-<a name="buildCriteria"/>
+<a name="buildCriteria"></a>
 #### buildCriteria ( criteriaArrays )
 
 Joins an array into a criteria string delimited by `AND`'s and `OR`'s.
@@ -59,7 +59,7 @@ console.log(criteria); // '((a AND b AND c) OR (d AND e AND f))'
 
 ---
 
-<a name="parenthesize"/>
+<a name="parenthesize"></a>
 #### parenthesize ( string )
 
 Wraps a string with parenthesis.
@@ -77,7 +77,7 @@ console.log(string); // '(a)'
 
 ---
 
-<a name="quote"/>
+<a name="quote"></a>
 #### quote ( string )
 
 Wraps a string with single quotes.
@@ -95,7 +95,7 @@ console.log(string); // "'a'"
 
 ---
 
-<a name="quoteList"/>
+<a name="quoteList"></a>
 #### quoteList ( strings )
 
 Converts an array of strings to a quoted comma delimited list.
