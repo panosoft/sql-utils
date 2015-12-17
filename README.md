@@ -113,7 +113,7 @@ console.log(string); // "'a','b','c'"
 
 ---
 
-<a name="parseOrderColumn"/>
+<a name="parseOrderColumn"></a>
 #### parseOrderColumn ( orderColumn )
 
 Returns an Array with the orderColumn in index 0 and *optionally* ASC/DESC in index 1.
@@ -136,7 +136,7 @@ utils.parseOrderColumn(orderColumn); // ['refNum']
 
 ---
 
-<a name="replaceOrderColumns"/>
+<a name="replaceOrderColumns"></a>
 #### replaceOrderColumns ( orderColumns, componentColumns )
 
 Takes an Array of Order Columns and replace any column that has components in the Object of Component Columns. This will preserve the ASC/DESC suffix in the original Order Column.
